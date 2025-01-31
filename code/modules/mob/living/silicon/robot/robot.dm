@@ -99,7 +99,7 @@
 	var/weaponlock_time = 120
 	var/lawupdate = TRUE //Cyborgs will sync their laws with their AI by default
 	var/lockcharge //Used when locking down a borg to preserve cell charge
-	var/speed = 0.25
+	var/speed = -0.75	//EQUINOX EDIT: Cyborgs can now match the movement speed of humans, QoL change
 	var/scrambledcodes = 0 // Used to determine if a borg shows up on the robotics console.  Setting to one hides them.
 	var/tracking_entities = 0 //The number of known entities currently accessing the internal camera
 	var/braintype = "Cyborg"
@@ -507,6 +507,7 @@
 		to_chat(src, SPAN_DANGER("You enable [C.name]."))
 
 /mob/living/silicon/robot/proc/update_robot_light()
+	light_color = null	//Equinox edit: Permanent bandaid fix to prevent fires from permanently tinting cyborg lights red.
 	if(lights_on)
 		if(intenselight)
 			set_light(integrated_light_power * 2, integrated_light_power)
@@ -556,7 +557,7 @@
 			var/mob/living/carbon/human/firer = Proj.firer
 			chance -= firer.stats.getStat(STAT_VIG, FALSE) / 5
 		var/obj/item/projectile/bullet/B = Proj
-		chance = max((chance / B.armor_divisor), 0)
+		chance = max((chance - B.armor_penetration), 0)
 		if (!(Proj.testing))
 			if(B.starting && prob(chance)) // disregard this for test because its luck based
 				visible_message(SPAN_DANGER("\The [Proj.name] ricochets off [src]\'s armour!"))

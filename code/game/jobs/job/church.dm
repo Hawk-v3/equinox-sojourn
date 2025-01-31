@@ -12,7 +12,7 @@
 	selection_color = "#ecd37d"
 	ideal_character_age = 40
 	minimum_character_age = 25
-	playtimerequired = 1200
+//	playtimerequired = 1200 // Equinox Edit
 	also_known_languages = list(LANGUAGE_LATIN = 100)
 	security_clearance = CLEARANCE_CLERGY
 	health_modifier = 10
@@ -30,6 +30,7 @@
 		STAT_COG = 10,
 		STAT_VIG = 15,
 		STAT_TGH = 10,
+		STAT_ROB = 15,
 	)
 
 	perks = list(PERK_NEAT, PERK_GREENTHUMB, PERK_CHANNELING)
@@ -83,6 +84,7 @@
 	STAT_BIO = 10,
 	STAT_VIG = 10,
 	STAT_TGH = 5,
+	STAT_ROB = 10,
 	)
 	disallow_species = list(FORM_SOTSYNTH, FORM_AGSYNTH, FORM_BSSYNTH, FORM_NASHEF)
 

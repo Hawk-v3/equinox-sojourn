@@ -378,7 +378,7 @@
 	caliber = CAL_FLARE
 	icon_state = "old-shell"
 	spent_icon = "old-shell-spent"
-	projectile_type = /obj/item/projectile/bullet/flare/choas
+	projectile_type = /obj/item/projectile/bullet/flare/chaos
 	matter = list(MATERIAL_PLASTIC = 1)
 	matter_reagents = list("phosphorus" = 3)
 	maxamount = 1
@@ -682,7 +682,7 @@
 
 /obj/item/ammo_casing/shotgun/laser/prespawned
 	amount = 5
-
+/*
 /obj/item/ammo_casing/shotgun/payload
 	name = "explosive shell"
 	desc = "A 20mm explosive shell."
@@ -695,7 +695,7 @@
 
 /obj/item/ammo_casing/shotgun/payload/prespawned
 	amount = 5
-
+*/
 /obj/item/ammo_casing/shotgun/plasma
 	name = "plasma shell"
 	desc = "A 20mm plasma shell."
@@ -791,7 +791,7 @@
 	name = "PG-7EMP grenade"
 	desc = "A 40mm EMP/Flash warhead designed for the RPG-7 launcher. Has a tubular shape."
 	projectile_type = /obj/item/projectile/bullet/rocket/emp
-
+/*
 /obj/item/ammo_casing/a75
 	name = "microjet casing"
 	desc = "A 19mm gyrojet rocket."
@@ -800,7 +800,7 @@
 
 /obj/item/ammo_casing/a75/spent
 	projectile_type = null
-
+*/
 /obj/item/ammo_casing/cap
 	name = "cap"
 	desc = "A cap for children toys."
@@ -931,7 +931,7 @@
 	w_class = ITEM_SIZE_SMALL
 	caliber = CAL_ARROW
 	force = WEAPON_FORCE_NORMAL
-	armor_divisor = ARMOR_PEN_GRAZING
+	armor_penetration = ARMOR_PEN_GRAZING
 	projectile_type = /obj/item/projectile/bullet/reusable/arrow
 	matter = list(MATERIAL_STEEL = 0.5, MATERIAL_WOOD = 0.5, MATERIAL_PLASTIC= 0.5)
 	maxamount = 3
@@ -962,7 +962,7 @@
 	name = "broadhead arrow"
 	icon_state = "arrow-broad"
 	force = WEAPON_FORCE_PAINFUL
-	armor_divisor = 1
+	armor_penetration = 1
 	desc = "A good-quality handmade arrow, with a metal head and plastic fletching. This one has quite a broad head, capable of causing severe damage to unarmored targets, but reducing its ability to penetrate armor."
 	projectile_type = /obj/item/projectile/bullet/reusable/arrow/broadhead
 
@@ -970,7 +970,7 @@
 	name = "serrated arrow"
 	icon_state = "arrow-serrated"
 	force = WEAPON_FORCE_PAINFUL
-	armor_divisor = 1
+	armor_penetration = 1
 	desc = "A good-quality handmade aerodinamic arrow, with a metal head and plastic fletching. This one has wicked sharp serrated blades along its head, letting it stick in wounds easily, penetrating thick hide and armor alike at fast speeds."
 	projectile_type = /obj/item/projectile/bullet/reusable/arrow/serrated
 

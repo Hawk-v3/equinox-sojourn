@@ -9,9 +9,9 @@
 	icon_state = "merc_rig"
 	suit_type = "crimson hardsuit"
 	armor_list = list(
-		melee = 10,
-		bullet = 10,
-		energy = 7,
+		melee = 40,
+		bullet = 40,
+		energy = 30,
 		bomb = 75,
 		bio = 100,
 		rad = 50
@@ -24,7 +24,7 @@
 	offline_vision_restriction = 1
 	stiffness = 0
 	obscuration = 0
-	price_tag = 2000
+	price_tag = 4000
 
 	helm_type = /obj/item/clothing/head/helmet/space/rig/merc
 

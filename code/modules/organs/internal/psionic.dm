@@ -29,7 +29,7 @@
 	var/allow_loop = TRUE      //Used for starting a looping process of regenning poings
 
 	//code/modules/psionics/psion.dm to see these vars in use.
-	//Minium timer for when a psionic point is generated
+	//Minimum timer for when a psionic point is generated
 	var/min_timer = 1 MINUTES
 	//Used for increasing psionic points though outside sources, resets on regen
 	var/psi_max_bonus = 0
@@ -37,8 +37,8 @@
 	var/cognitive_potential = 0
 	//The maxium amount are cog can lower cooldown
 	var/cognitive_potential_max = 3
-
-
+	//Used for things outside of when we gather it in regen
+	var/psi_max_other_sources = 0
 
 	owner_verbs = list(
 		/mob/living/carbon/human/proc/psionic_healing,

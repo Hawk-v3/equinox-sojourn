@@ -61,6 +61,9 @@
 		remove_verb(owner, owner_verbs)
 	// Reset when removed
 	owner_verbs = initial_owner_verbs.Copy()
+
+//	if(GetComponent(/datum/component/internal_wound/organic/parenchyma))	//Not relevant to us as this is for the NT Church on Eris killing mutants
+//		owner.mutation_index--
 	..()
 
 /obj/item/organ/internal/replaced(obj/item/organ/external/affected)
@@ -82,6 +85,9 @@
 
 	add_verb(owner, owner_verbs)
 
+//	if(GetComponent(/datum/component/internal_wound/organic/parenchyma))	//Not relevant to us as this is for the NT Church on Eris killing mutants
+//		owner.mutation_index++
+
 /obj/item/organ/internal/proc/organ_add_verb(procpath/P)
 	owner_verbs |= P
 	if(owner)
@@ -95,7 +101,7 @@
 /obj/item/organ/internal/proc/get_process_efficiency(process_define)
 	return organ_efficiency[process_define] - (organ_efficiency[process_define] * (damage / max_damage))
 
-/obj/item/organ/internal/take_damage(amount, damage_type = BRUTE, wounding_multiplier = 1, silent = FALSE, sharp = FALSE, edge = FALSE) //Deals damage to the organ itself
+/obj/item/organ/internal/take_damage(amount, damage_type = BRUTE, wounding_multiplier = 1, silent = FALSE, sharp = FALSE, silent = FALSE) //Deals damage to the organ itself
 	if(!damage_type || status & ORGAN_DEAD)
 		return FALSE
 

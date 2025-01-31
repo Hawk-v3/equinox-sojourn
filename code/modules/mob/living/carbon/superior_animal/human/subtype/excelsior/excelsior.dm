@@ -9,7 +9,7 @@
 	maxHealth = 100 * EXCELSIOR_HEALTH_MOD
 	health = 100 * EXCELSIOR_HEALTH_MOD
 
-	armor = list(melee = 13, bullet = 13, energy = 17, bomb = 80, bio = 90, rad = 25) //Legitmently their armor (melee is higher {45} to account for AI stupidness)
+	armor = list(melee = 55, bullet = 55, energy = 70, bomb = 80, bio = 90, rad = 25) //Legitmently their armor (melee is higher {45} to account for AI stupidness)
 
 	//range/ammo stuff
 	ranged = 1
@@ -115,12 +115,12 @@
 
 	melee_damage_lower = 33
 	melee_damage_upper = 40
-	armor_divisor = ARMOR_PEN_DEEP
+	armor_penetration = ARMOR_PEN_DEEP
 
 	ranged = 0
 	rapid = 0
 	//Baseline armor + a littlebit of armor from the shield they hold
-	armor = list(melee = 65, bullet = 60, energy = 75, bomb = 85, bio = 100, rad = 25)
+	armor = list(melee = 16, bullet = 15, energy = 18, bomb = 85, bio = 100, rad = 25)
 	//Atm snowflake code for these 2 mobs to not bloat the parrent anymore
 	var/block_chance = 50
 	var/give_cooldown_odds = 60

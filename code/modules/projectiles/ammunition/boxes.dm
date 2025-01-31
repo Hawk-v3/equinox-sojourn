@@ -512,7 +512,7 @@
 	max_ammo = 15
 
 /obj/item/ammo_magazine/ammobox/antim/scrap
-	name = "ammunition box (old 14.5mm Anti Materiel)"
+	name = "ammunition box (old 14.5mm Anti-Materiel)"
 	icon_state = "antim_s"
 	ammo_type = /obj/item/ammo_casing/antim/scrap
 	max_ammo = 5
@@ -775,12 +775,12 @@
 	name = "ammunition packet (20mm Stun Shells)"
 	icon_state = "stunslug"
 	ammo_type = /obj/item/ammo_casing/shotgun/stunshell
-
+/*
 /obj/item/ammo_magazine/ammobox/shotgun/payload
 	name = "ammunition packet (20mm Explosive Shells)"
 	icon_state = "explosive"
 	ammo_type = /obj/item/ammo_casing/shotgun/payload
-
+*/
 /obj/item/ammo_magazine/ammobox/shotgun/incendiary
 	name = "ammunition packet (20mm Incendiary)"
 	icon_state = "incendiary"

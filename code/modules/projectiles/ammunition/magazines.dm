@@ -811,7 +811,7 @@
 
 /obj/item/ammo_magazine/kurtz_50
 	name = "heavy pistol magazine"
-	desc = "A 7 round magazine marked for 12mm."
+	desc = "A 10 round magazine marked for 12mm."
 	icon_state = "kurtz"
 	origin_tech = list(TECH_COMBAT = 2)
 	mag_type = MAGAZINE
@@ -819,7 +819,7 @@
 	caliber = CAL_50
 	matter = list(MATERIAL_STEEL = 4)
 	ammo_type = /obj/item/ammo_casing/kurtz_50
-	max_ammo = 7
+	max_ammo = 10
 	multiple_sprites = 1
 
 /obj/item/ammo_magazine/kurtz_50/empty
@@ -951,13 +951,13 @@
 
 /obj/item/ammo_magazine/speed_loader_kurtz_50
 	name = "speed loader (12mm Special)"
-	desc = "A 5 round speed loader marked for 12mm."
+	desc = "A 6 round speed loader marked for 12mm."
 	icon_state = "slmagnum_base"
 	icon = 'icons/obj/ammo_speed.dmi'
 	caliber = CAL_50
 	ammo_type = /obj/item/ammo_casing/kurtz_50
 	matter = list(MATERIAL_STEEL = 3)
-	max_ammo = 5
+	max_ammo = 6
 
 /obj/item/ammo_magazine/speed_loader_kurtz_50/update_icon()
 	cut_overlays()
@@ -1108,7 +1108,7 @@
 	matter = list(MATERIAL_STEEL = 2)
 	max_ammo = 8
 	multiple_sprites = 1
-
+/*
 /obj/item/ammo_magazine/a75
 	name = "ammo magazine (19mm gyro)"
 	desc = "A 4 magazine in 19mm gyro."
@@ -1124,7 +1124,7 @@
 /obj/item/ammo_magazine/a75/empty
 	initial_ammo = 0
 	icon_state = "gyropistol-0"
-
+*/
 ////////////Shotguns!////////////
 
 /obj/item/ammo_magazine/m12
@@ -1192,12 +1192,12 @@
 	name = "20mm SBAW magazine (buckshot)"
 	icon_state = "sbaw_buck"
 	ammo_type = /obj/item/ammo_casing/shotgun/pellet
-
+/*
 /obj/item/ammo_magazine/sbaw/he
 	name = "20mm SBAW magazine (HEFI)"
 	icon_state = "sbaw_he"
 	ammo_type = /obj/item/ammo_casing/shotgun/payload
-
+*/
 // SCI ammo
 /obj/item/ammo_magazine/rifle_223
 	name = "short carbine magazine"
