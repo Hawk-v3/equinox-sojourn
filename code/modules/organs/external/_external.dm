@@ -68,7 +68,7 @@
 	var/cannot_break		// Impossible to fracture.
 	var/joint = "joint"		// Descriptive string used in dislocation.
 	var/amputation_point	// Descriptive string used in amputation.
-	var/nerve_struck = 0		// If you target a joint, you can dislocate the limb, impairing it's usefulness and causing pain
+	var/nerve_struck = 0	// If you target a joint, you can dislocate the limb, impairing it's usefulness and causing pain
 	var/encased				// Needs to be opened with a saw to access certain organs.
 	var/cavity_name = "cavity"				// Name of body part's cavity, displayed during cavity implant surgery
 	var/max_volume = ITEM_SIZE_SMALL	// Max w_class of cavity implanted items
@@ -85,6 +85,8 @@
 
 	// Generation behavior
 	var/generation_flags = ORGAN_HAS_BONES | ORGAN_HAS_BLOOD_VESSELS | ORGAN_HAS_MUSCLES | ORGAN_HAS_NERVES
+
+	var/list/markings = list() //EQUINOX EDIT - List of body markings for use in update_icon under organ_icon.dm (per-limb markings)
 
 /obj/item/organ/external/New(mob/living/carbon/human/holder, datum/organ_description/OD)
 	if(OD)

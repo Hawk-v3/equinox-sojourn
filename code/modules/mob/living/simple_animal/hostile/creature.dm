@@ -30,6 +30,15 @@
 
 	supernatural = 1
 
+/mob/living/simple_animal/hostile/creature/tissue
+	name  = "Mutated Tissue"
+	desc = "An amalgamation of flesh and bone"
+	color = "#8B0000"
+	health = 200
+	maxHealth = 200
+	melee_damage_lower = 20
+	melee_damage_upper = 35
+
 /mob/living/simple_animal/hostile/retaliate/spaceman
 	name = "spaceman"
 	desc = "This strange being resembles a human, but is something different entirely."
@@ -122,7 +131,7 @@
 	has_special_parts = TRUE
 	inherent_mutations = list(MUTATION_BLINDNESS, MUTATION_ECHOLOCATION, MUTATION_TOXIN_RESISTANCE, MUTATION_BLOOD_BANK)
 	special_parts = list(/obj/item/animal_part/sarg_horn, /obj/item/animal_part/sarg_horn)
-	armor = list(melee = 1, bullet = 2, energy = 0, bomb = 25, bio = 0, rad = 25)
+	armor = list(melee = 5, bullet = 10, energy = 0, bomb = 25, bio = 0, rad = 25)
 
 /*
 #define MOOK_ATTACK_NEUTRAL 0
