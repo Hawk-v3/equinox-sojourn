@@ -9,6 +9,7 @@ SMOKING PIPES
 CHEAP LIGHTERS
 ZIPPO
 VAPE
+ROLL YOUR OWN
 
 CIGARETTE PACKETS ARE IN FANCY.DM
 */
@@ -1089,3 +1090,58 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 	name = "\improper Brass Zippo lighter"
 	desc = "A shiney brass zippo made to last, for some reason the metal is always cold to the touch and rather then the flint to start the flame makes a ticking sound when used."
 	icon_state = "brass_zippo"
+
+//////////////////////////////
+// MARK: ROLLING
+//////////////////////////////
+/*
+/obj/item/rollingpaper
+	name = "rolling paper"
+	desc = "A thin piece of paper used to make fine smokeables."
+	icon = 'icons/obj/cigarettes.dmi'
+	icon_state = "cig_paper"
+	w_class = WEIGHT_CLASS_TINY
+
+/obj/item/rollingpaper/afterattack__legacy__attackchain(atom/target, mob/user, proximity)
+	if(!proximity)
+		return
+
+	if(!istype(target, /obj/item/food/grown))
+		return ..()
+
+	var/obj/item/food/grown/plant = target
+	if(!plant.dry)
+		to_chat(user, "<span class='warning'>You need to dry this first!</span>")
+		return
+
+	user.unequip(plant, TRUE)
+	user.unequip(src, TRUE)
+	var/obj/item/clothing/mask/cigarette/rollie/custom/custom_rollie = new (get_turf(user))
+	custom_rollie.reagents.maximum_volume = plant.reagents.total_volume
+	plant.reagents.trans_to(custom_rollie, plant.reagents.total_volume)
+	custom_rollie.smoketime = custom_rollie.reagents.total_volume * 2.5
+
+	user.put_in_active_hand(custom_rollie)
+	to_chat(user, "<span class='notice'>You roll the [plant.name] into a rolling paper.</span>")
+	custom_rollie.desc = "Dried [plant.name] rolled up in a thin piece of paper."
+
+	qdel(plant)
+	qdel(src)
+
+/obj/item/clothing/mask/cigarette/rollie
+	name = "rollie"
+	desc = "A roll of dried plant matter wrapped in thin paper."
+	icon_state = "spliffoff"
+	icon_on = "spliffon"
+	icon_off = "spliffoff"
+	type_butt = /obj/item/cigbutt/roach
+	throw_speed = 0.5
+	item_state = "spliffoff"
+	list_reagents = list("thc" = 40, "cbd" = 20)
+
+/obj/item/clothing/mask/cigarette/rollie/Initialize(mapload)
+	. = ..()
+	scatter_atom()
+/obj/item/clothing/mask/cigarette/rollie/custom
+	list_reagents = list()
+*/
